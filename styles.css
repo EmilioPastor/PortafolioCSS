@@ -21,6 +21,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
 /* Header */
 header {
   position: fixed;
@@ -34,8 +35,22 @@ header {
   justify-content: space-around;
   align-items: center;
   z-index: 1;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
+/* ANIMACION 3D */
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 header .logo {
   color: var(--principal);
   margin-right: 130px;
@@ -61,7 +76,7 @@ header ul li a {
 
 header ul li a:hover {
   color: var(--principal);
-  transition: all 0.3s ease 0s;
+  transition: all 0.9s step-end 0.9s;
 }
 
 /* Home */
@@ -113,7 +128,7 @@ section.home-section {
 
 .iconos-redes li:hover {
   background-color: var(--principal);
-  transition: all 0.3s ease 0s;
+  transition: all 1.5s ease-in-out 0.5s;
 }
 
 .iconos-redes i {
@@ -129,7 +144,7 @@ section.home-section {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  transition: all 0.3s ease 0s;
+  transition: all 1.5s ease-in-out 0.5s;
 }
 
 .botones-home button {
@@ -158,7 +173,7 @@ section.home-section {
 
 .btn.btn-principal:hover {
   background-color: var(--principal-hover);
-  transition: all 0.3s ease 0s;
+  transition: all 1.3s linear 0s;
 }
 
 .btn-oscuro {
@@ -213,7 +228,6 @@ section.sobre-mi-section {
   color: #c4c4c4;
   font-size: 18px;
 }
-
 .sobre-mi-contenido button {
   margin-top: 30px;
   font-size: 15px;
@@ -283,6 +297,8 @@ section.proyectos-section {
   font-size: 14px;
   color: #c4c4c4;
 }
+
+
 
 .proyectos-card-box-buttons {
   margin-top: 25px;
@@ -382,9 +398,17 @@ footer a {
   /* Home */
   section.home-section {
     flex-direction: column;
+    align-items: flex-start;
     padding: 40px;
     padding-top: 130px;
   }
+
+  .iconos-redes {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
 
 
   /* Sobre-mi */

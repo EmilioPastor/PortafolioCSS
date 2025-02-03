@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* Variables */
 :root {
   --principal: #12bdff;
@@ -87,8 +87,11 @@ section.home-section {
 
 .iconos-redes {
   margin: 18px 0;
-  list-style: none;
   display: flex;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
 .iconos-redes li {
@@ -96,6 +99,16 @@ section.home-section {
   border-radius: 50%;
   border: 1px solid var(--principal);
   padding: 8px 12px;
+  display: inline-block;
+}
+
+.iconos-redes a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .iconos-redes li:hover {
@@ -103,7 +116,16 @@ section.home-section {
   transition: all 0.3s ease 0s;
 }
 
-.iconos-redes li a {
+.iconos-redes i {
+  font-size: 20px;
+  color: #0077b5;
+}
+
+.iconos-redes a:hover i {
+  color: #005582;
+}
+
+.iconos-redes li {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
@@ -171,7 +193,6 @@ section.sobre-mi-section {
   border-radius: 50%;
   border: 3px solid var(--principal);
   box-shadow: 3px 5px 30px #03506e;
-  object-fit: cover;
 }
 
 .sobre-mi-contenido {
@@ -188,8 +209,9 @@ section.sobre-mi-section {
 }
 
 .sobre-mi-contenido p {
+  font-family: "Alata", serif;
   color: #c4c4c4;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .sobre-mi-contenido button {
@@ -202,9 +224,8 @@ section.sobre-mi-section {
   color: var(--oscuro-principal);
 }
 
-
-
 /* Proyectos */
+
 section.proyectos-section {
   background-color: var(--oscuro-principal);
   color: #fff;
@@ -258,6 +279,7 @@ section.proyectos-section {
 }
 
 .proyectos-card-box-desc p {
+  font-family: "Alata", serif;
   font-size: 14px;
   color: #c4c4c4;
 }
@@ -281,6 +303,48 @@ section.proyectos-section {
 
 
 /* Contacto */
+section.contacto-section {
+  background-color: #22282f;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.contacto-section h2 {
+  font-size: 28px;
+  margin: 18px 0;
+}
+
+.contacto-section h2 span {
+  color: var(--principal);
+}
+
+.contacto-section form div input,
+textarea {
+  background-color: #c4c4c4;
+  width: 300px;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.contacto-section form div input:focus,
+textarea:focus {
+  border: 3px solid var(--principal);
+}
+
+.contacto-section form div button {
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.contacto-section form div button:hover {
+  border: 7px solid var(--principal);
+}
 
 
 /* Footer */
@@ -350,5 +414,8 @@ footer a {
   }
 
   /* Contacto */
-
+  .contacto-section form div input,
+  textarea {
+    width: 100%;
+  }
 }

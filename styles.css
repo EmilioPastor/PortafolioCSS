@@ -208,6 +208,15 @@ section.sobre-mi-section {
   border-radius: 50%;
   border: 3px solid var(--principal);
   box-shadow: 3px 5px 30px #03506e;
+  transition:  0.3s;
+}
+
+.sobre-mi-img img:hover {
+  box-shadow: 3px 5px 30px var(--principal);
+  transition:  0.3s;
+  scale: 1.05;
+  padding: 2px;
+
 }
 
 .sobre-mi-contenido {
@@ -286,10 +295,13 @@ section.proyectos-section {
   background-color: var(--oscuro-principal);
   transition: all 0.5s ease 0s;
 }
+.proyectos-card-box-desc {
+  text-align: center;
 
+}
 .proyectos-card-box-desc h4 {
   font-size: 18px;
-  margin: 18px 0 10px 0;
+  margin: 18px 0 20px 0;
 }
 
 .proyectos-card-box-desc p {
@@ -298,6 +310,10 @@ section.proyectos-section {
   color: #c4c4c4;
 }
 
+.img-cartas {
+  border: 8px solid var(--principal);
+  border-radius: 50px;
+}
 
 
 .proyectos-card-box-buttons {

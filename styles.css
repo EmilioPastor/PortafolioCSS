@@ -445,6 +445,10 @@ footer a {
     width: 100%;
     margin: 10px 0;
   }
+  .img-cartas {
+    width: 200px;
+    height: 200px;
+  }
 
   /* Contacto */
   .contacto-section form div input,

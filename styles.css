@@ -266,10 +266,14 @@ section.proyectos-section {
 
 .proyectos-cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .proyectos-card-box {
-  width: 33.33%;
+  width: 100%;
+  max-width: 350px;
   margin: 35px 10px;
   padding: 33px;
   background-color: #22282f;
@@ -295,10 +299,11 @@ section.proyectos-section {
   background-color: var(--oscuro-principal);
   transition: all 0.5s ease 0s;
 }
+
 .proyectos-card-box-desc {
   text-align: center;
-
 }
+
 .proyectos-card-box-desc h4 {
   font-size: 18px;
   margin: 18px 0 20px 0;
@@ -309,8 +314,6 @@ section.proyectos-section {
   font-size: 14px;
   color: #c4c4c4;
 }
-
-
 
 .proyectos-card-box-buttons {
   margin-top: 25px;
@@ -327,6 +330,24 @@ section.proyectos-section {
   text-decoration: none;
   font-size: 13px;
   color: #fff;
+}
+
+.proyectos-card-box-desc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .proyectos-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proyectos-card-box {
+    width: 90%;
+    padding: 20px;
+  }
 }
 
 

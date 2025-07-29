@@ -1,186 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
-    <title>PORTFOLIO-EPZ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./styles.css">
-
+    <title>Emilio Pastor – Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-
-    <!-- HEADER -->
-    <header>
-
-        <div>
-            <a href="./index.html"><span class="logo">DESARROLLADOR-WEB</span></a>
+    <header class="site-header">
+        <div class="container header-inner" data-aos="fade-down">
+            <a href="#home" class="logo">EMILIO PASTOR</a>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fa fa-bars"></i>
+            </button>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#education">Educación</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <div>
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#sobre-mi">Sobre mi</a>
-                </li>
-                <li>
-                    <a href="#proyectos">Proyectos</a>
-                </li>
-                <li>
-                    <a href="#contacto">Contacto</a>
-                </li>
-            </ul>
-        </div>
-
     </header>
 
-    <!-- HOME -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
     <main>
-        <section class="home-section" id="home">
-            <div>
-                <div>
-                    <h4>Hola!</h4>
-                    <h2 class="home-section-title">Soy <span>Emilio Pastor</span></h2>
-
-                    <p class="home-section-desc">Soy Desarrollador Web, especializado en FullStack, con habilidades
-                        como HTML, CSS, JavaScript, React, Laravel.. </p>
-                </div>
-
-                <ul class="iconos-redes">
-                    <li>
-                        <a href="http://www.linkedin.com/in/emilio-pastor-zurita-694880228">
-                            <i class="fa-brands fa-linkedin"></i> Linkedin
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:emiliopastorzurita906@gmail.com?Subject=He%20visto%20tu%20Portafolio">
-                            <i class="fa-solid fa-envelope"></i> Contactar por correo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./assets/cv/cv.pdf" download id="sobre-mi">
-                            <i class="fa-solid fa-file-lines"></i>Descargar CV
-                        </a>
-                    </li>
-                </ul>
-
-
-
+        <!-- Hero -->
+        <section id="home" class="hero" data-aos="fade-up">
+            <div class="container hero-content">
+                <h1>Hola, soy <span>Emilio Pastor</span></h1>
+                <h2 class="typing"></h2>
+                <p>Desarrollador Front‑end recién graduado, apasionado por la innovación y el trabajo en equipo.</p>
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
             </div>
         </section>
 
-        <!-- Sobre Mi  -->
-        <section class="sobre-mi-section">
-
-            <div class="sobre-mi-img">
-                <img src="assets/img/emilio.jpg" alt="Imagen Personal">
+        <!-- Sobre mí -->
+        <section id="about" class="about">
+            <div class="container about-grid" data-aos="fade-right">
+                <div class="about-img" data-aos="zoom-in">
+                    <img src="assets/img/emilio.jpg" alt="Emilio Pastor">
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <h2>Sobre mí</h2>
+                    <p>Soy un desarrollador Web FullStack recién titulado con conocimientos en HTML5, CSS3, JavaScript,
+                        React y Laravel. Me adapto rápido y disfruto de los retos.</p>
+                    
+                    <a href="./assets/cv/cv.pdf" download class="btn btn-outline">Descargar CV</a>
+                </div>
             </div>
+        </section>
 
-            <div class="sobre-mi-contenido">
-                <h4>Sobre mi</h4>
-                <h2>Soy Programador<br> <span>FullStack</span></h2>
-                <p>Soy un desarrollador Full Stack con pasión por crear soluciones digitales eficientes y escalables.
-                    Tengo experiencia en tecnologías frontend y backend, desarrollando aplicaciones web dinámicas y
-                    optimizadas.
-                    Me encanta afrontar nuevos retos, aprender constantemente y trabajar en equipo para construir
-                    productos de alto impacto.</p>
-                <a href="https://github.com/EmilioPastor" target="_blank">
-                    <button class="btn btn-oscuro" id="proyectos" >
-                        Github
-                    </button>
-                </a>
-
+        <!-- Experiencia -->
+        <section id="experience" class="experience" data-aos="fade-up">
+            <div class="container">
+                <h2>Experiencia</h2>
+                <ul class="timeline">
+                    <li data-aos="fade-right">
+                        <h3>Becario Marketing Digital</h3>
+                        <span>Librería La Pizarra, Córdoba | 05/2021–09/2021</span>
+                        <p>Desarrollo y optimización de estrategias SEO, gestión de Google Ads y Facebook Ads.</p>
+                    </li>
+                    <li data-aos="fade-left">
+                        <h3>Técnico en Sistemas</h3>
+                        <span>S.T.A.E, Italia | 03/2022–06/2022</span>
+                        <p>Montaje y administración de sistemas, configuraciones en WordPress y HTML5.</p>
+                    </li>
+                    <li data-aos="fade-right">
+                        <h3>Camarero</h3>
+                        <span>Restaurante XYZ, Córdoba | 2020–2023</span>
+                        <p>Atención al cliente, trabajo en equipo y responsabilidad diaria.</p>
+                    </li>
+                </ul>
             </div>
+        </section>
 
+        <!-- Educación -->
+        <section id="education" class="education" data-aos="fade-up">
+            <div class="container">
+                <h2>Educación</h2>
+                <ul class="timeline">
+                    <li data-aos="fade-right">
+                        <h3>Grado Superior en DAW</h3>
+                        <span>I.E.S. Inca Garcilaso, Montilla | 09/2022–06/2025</span>
+                        <p>Desarrollo de aplicaciones web, bases de datos y uso de frameworks.</p>
+                    </li>
+                    <li data-aos="fade-left">
+                        <h3>Grado Medio en SMR</h3>
+                        <span>I.E.S. Profesor Tierno Galván, La Rambla | 09/2020–06/2022</span>
+                        <p>Sistemas microinformáticos, redes y administración de servidores.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Proyectos -->
-        <section class="proyectos-section">
-            <h2>Mis <span>Proyectos</span></h2>
-            <div class="proyectos-cards">
-                <div class="proyectos-card-box">
-                    <div class="proyectos-card-box-desc">
-                        <h4>Cartas JavaScript</h4>
-                        <img src="./assets/img/CartasIcon.png" class="img-cartas" width="300px" height="300px" alt="Cartas"> </img>
-                    </div>
-                    <div class="proyectos-card-box-buttons">
-                        <a href="https://cartas-js-git-main-emiliopastors-projects.vercel.app/" target="_blank">
-                            <button class="btn btn-oscuro">
-                                Ver
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="proyectos-card-box">
-                    <div class="proyectos-card-box-desc">
-                        <h4>CRUD Next.js </h4>
-                        <img src="./assets/img/nextjs.png" class="img-cartas" width="300px" height="300px" alt="Next"> </img>
-                    </div>
-                    <div class="proyectos-card-box-buttons">
-                        <a href="https://github.com/EmilioPastor/pruebasimulacro" target="_blank">
-                            <button class="btn btn-oscuro">
-                                Ver
-                            </button>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="proyectos-card-box">
-                    <div class="proyectos-card-box-desc">
-                        <h4>Proyecto Final React</h4>
-                        <img src="./assets/img/reactProcces.png" class="img-cartas" width="300px" height="300px" alt="REACT">
-                        </img>
-
-                    </div>
-                    <div class="proyectos-card-box-buttons">
-                        <a href="" target="_blank">
-                            <button class="btn btn-oscuro">
-                                En proceso..
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
+        <section id="projects" class="projects" data-aos="fade-up">
+            <div class="container">
+                <h2>Mis <span>Proyectos</span></h2>
+                <div id="projects-grid" class="projects-grid"></div>
             </div>
         </section>
 
         <!-- Contacto -->
-        <section class="contacto-section" id="contacto">
-            <h2>Contacta <span>Conmigo!</span></h2>
-            <form action="https://formsubmit.co/emiliopastorzurita906@gmail.com" method="POST">
-                <div>
-                    <input type="text" name="name" placeholder="Nombre..." required>
-                </div>
-                <div>
-                    <input type="email" name="email" placeholder="Email..." required>
-                </div>
-                <div>
-                    <textarea name="message" placeholder="Comentario..." rows="5" required></textarea>
-                </div>
-                <!-- Campos ocultos para configuración -->
-                <input type="hidden" name="_next" value="https://portafolio-css-sepia.vercel.app/">
-                <input type="hidden" name="_captcha" value="false">
-                <div>
-                    <button type="submit" class="btn btn-claro">Enviar Comentario</button>
-                </div>
-            </form>
+        <section id="contact" class="contact" data-aos="fade-up">
+            <div class="container">
+                <h2>Contacto</h2>
+                <form action="https://formsubmit.co/emiliopastorzurita906@gmail.com" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <input type="hidden" name="_next" value="https://tu-portfolio.vercel.app/">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
         </section>
-
-
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>DIW Tema 4- <a href="https://github.com/EmilioPastor">Emilio Pastor</a> - Portafolio 24/25</p>
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">© 2025 Emilio Pastor. <a href="https://github.com/EmilioPastor"
+                target="_blank">GitHub</a></div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Menú móvil
+        document.querySelector('.nav-toggle')
+            .addEventListener('click', () =>
+                document.querySelector('.site-nav').classList.toggle('open')
+            );
+
+        // Scroll-to-top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () =>
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300)
+        );
+        scrollTopBtn.addEventListener('click', () =>
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        );
+
+        // Typing effect en español
+        const textos = ['Desarrollador Front‑end', 'Entusiasta de React', 'Solucionador de problemas'];
+        let i = 0, j = 0;
+        const el = document.querySelector('.typing');
+        function escribir() {
+            if (j < textos[i].length) {
+                el.textContent += textos[i].charAt(j++);
+                setTimeout(escribir, 100);
+            } else {
+                setTimeout(borrar, 2000);
+            }
+        }
+        function borrar() {
+            if (j > 0) {
+                el.textContent = el.textContent.slice(0, -1);
+                j--;
+                setTimeout(borrar, 50);
+            } else {
+                i = (i + 1) % textos.length;
+                setTimeout(escribir, 500);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () =>
+            setTimeout(escribir, 1000)
+        );
+
+        // Carga únicamente proyectos desplegados en Vercel
+        async function loadProjects() {
+            const grid = document.getElementById('projects-grid');
+            try {
+                const res = await fetch('https://api.github.com/users/EmilioPastor/repos?sort=updated&per_page=20');
+                const repos = await res.json();
+                repos
+                    .filter(r => r.homepage && r.homepage.includes('vercel.app'))
+                    .forEach(r => {
+                        const c = document.createElement('article');
+                        c.className = 'project-card';
+                        c.innerHTML = `
+              <div class="card-img" style="background-image:url('https://opengraph.githubassets.com/1/${r.full_name}')"></div>
+              <div class="card-overlay">
+                <h3>${r.name}</h3>
+                <p>${r.description || 'Sin descripción'}</p>
+                <div class="card-buttons">
+                  <a href="${r.html_url}" target="_blank" class="btn btn-sm">GitHub</a>
+                  <a href="${r.homepage}" target="_blank" class="btn btn-sm btn-outline">Demo</a>
+                </div>
+              </div>
+            `;
+                        grid.appendChild(c);
+                    });
+            } catch (err) {
+                console.error('Error cargando repos:', err);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
 </body>
 
 </html>

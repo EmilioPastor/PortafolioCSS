@@ -55,9 +55,8 @@
                 </div>
                 <div class="about-content" data-aos="fade-left">
                     <h2>Sobre mí</h2>
-                    <p>Soy un desarrollador Web FullStack recién titulado con conocimientos en HTML5, CSS3, JavaScript,
+                    <p>Soy un Desarrollador Web recién titulado con conocimientos en HTML5, CSS3, JavaScript,
                         React y Laravel. Me adapto rápido y disfruto de los retos.</p>
-                    
                     <a href="./assets/cv/cv.pdf" download class="btn btn-outline">Descargar CV</a>
                 </div>
             </div>
@@ -80,7 +79,7 @@
                     </li>
                     <li data-aos="fade-right">
                         <h3>Camarero</h3>
-                        <span>Restaurante XYZ, Córdoba | 2020–2023</span>
+                        <span>Restaurante Coma y Punto, La Rambla, Córdoba | 2020–2023</span>
                         <p>Atención al cliente, trabajo en equipo y responsabilidad diaria.</p>
                     </li>
                 </ul>
@@ -118,14 +117,13 @@
         <section id="contact" class="contact" data-aos="fade-up">
             <div class="container">
                 <h2>Contacto</h2>
-                <form action="https://formsubmit.co/emiliopastorzurita906@gmail.com" method="POST" class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <input type="text" name="name" placeholder="Tu nombre" required>
                     <input type="email" name="email" placeholder="Tu email" required>
                     <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
                     <button type="submit" class="btn btn-primary">Enviar</button>
-                    <input type="hidden" name="_next" value="https://tu-portfolio.vercel.app/">
-                    <input type="hidden" name="_captcha" value="false">
                 </form>
+                <p id="form-status"></p>
             </div>
         </section>
     </main>
@@ -180,7 +178,30 @@
             setTimeout(escribir, 1000)
         );
 
-        // Carga únicamente proyectos desplegados en Vercel
+        // AJAX Contact Form
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const status = document.getElementById('form-status');
+            status.textContent = 'Enviando...';
+            const data = new FormData(form);
+            try {
+                const res = await fetch('https://formsubmit.co/ajax/emiliopastorzurita906@gmail.com', {
+                    method: 'POST', body: data
+                });
+                const json = await res.json();
+                if (json.success) {
+                    status.textContent = 'Mensaje enviado, ¡gracias!';
+                    form.reset();
+                } else {
+                    status.textContent = 'Error al enviar. Intenta de nuevo.';
+                }
+            } catch {
+                status.textContent = 'Error de red.';
+            }
+        });
+
+        // Load only Vercel projects
         async function loadProjects() {
             const grid = document.getElementById('projects-grid');
             try {
@@ -205,7 +226,7 @@
                         grid.appendChild(c);
                     });
             } catch (err) {
-                console.error('Error cargando repos:', err);
+                console.error(err);
             }
         }
         document.addEventListener('DOMContentLoaded', loadProjects);
